@@ -1,5 +1,6 @@
 package Controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Models.Carrinho;
@@ -7,7 +8,7 @@ import Models.CarrinhoItens;
 import Models.Produto;
 
 public class CarrinhoController {
-	private List<CarrinhoItens> cartItens;
+	private List<CarrinhoItens> cartItens = new ArrayList<CarrinhoItens>();
 	
 	public  void addItem(Carrinho cart,Produto product, Double quantity, double unitPrice ) {
 		
@@ -25,5 +26,15 @@ public class CarrinhoController {
 		
 	}
 	
+	
+	@Override
+	public String toString() {
+		//descricao de cada produto
+		//quantidade adicionada
+		//valor unitario
+		//valor total
+		//mostrar o cliente
+		return "";
+	}
 	
 }

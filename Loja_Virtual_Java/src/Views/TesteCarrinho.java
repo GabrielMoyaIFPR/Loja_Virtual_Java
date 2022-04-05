@@ -22,5 +22,7 @@ public class TesteCarrinho {
 		
 		CarrinhoController cartController = new CarrinhoController();
 		cartController.addItem(cart, product, 33.99, 2);
+		
+		System.out.println(cartController);
 	}
 }
