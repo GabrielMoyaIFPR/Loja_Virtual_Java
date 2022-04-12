@@ -1,9 +1,9 @@
-package Views;
+package views;
 
-import Controllers.CarrinhoController;
-import Models.Carrinho;
-import Models.Cliente;
-import Models.Produto;
+import controllers.CarrinhoController;
+import models.Carrinho;
+import models.Cliente;
+import models.Produto;
 
 public class TesteCarrinho {
 
@@ -21,7 +21,7 @@ public class TesteCarrinho {
 		cart.setClient(client);
 		
 		CarrinhoController cartController = new CarrinhoController();
-		cartController.addItem(cart, product, 33.99, 2);
+		cartController.addItem(cart, product, 2.0, 33.99);
 		
 		System.out.println(cartController);
 	}

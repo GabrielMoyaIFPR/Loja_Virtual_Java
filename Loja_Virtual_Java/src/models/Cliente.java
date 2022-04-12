@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 import java.util.Date;
 
@@ -42,4 +42,8 @@ public class Cliente {
 		this.mobile_phone = mobile_phone;
 	}
 	
+	@Override
+	public String toString() {
+		return "Cliente:" + getName();
+	}
 }

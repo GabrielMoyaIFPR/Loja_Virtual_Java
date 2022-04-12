@@ -1,11 +1,12 @@
-package Controllers;
+package controllers;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Models.Carrinho;
-import Models.CarrinhoItens;
-import Models.Produto;
+import models.Carrinho;
+import models.CarrinhoItens;
+import models.Cliente;
+import models.Produto;
 
 public class CarrinhoController {
 	private List<CarrinhoItens> cartItens = new ArrayList<CarrinhoItens>();
@@ -16,7 +17,7 @@ public class CarrinhoController {
 		itens.setCart(cart);
 		itens.setProduct(product);
 		itens.setQuantity(quantity);
-		itens.setUnit_price(unitPrice);
+		itens.setUnitPrice(unitPrice);
 		cartItens.add(itens);
 		
 	}
@@ -26,15 +27,21 @@ public class CarrinhoController {
 		
 	}
 	
-	
+	public String result(){
+		int i;
+		String data = "";
+		for(i=0; i < cartItens.size() ; i++) {
+			data = "Produto: \n" + cartItens.get(i).getProduct().getName()
+			+ "\nQuantidade: \n" + cartItens.get(i).getQuantity()
+			+ "\nValor Unitario: \n" + cartItens.get(i).getUnitPrice()
+			+ " \nUsuario: \n" + cartItens.get(i).getCart().getClient().getName();
+		} return data;
+	}
+
 	@Override
 	public String toString() {
-		//descricao de cada produto
-		//quantidade adicionada
-		//valor unitario
-		//valor total
-		//mostrar o cliente
-		return "";
+		return result();
+				
 	}
 	
 }
