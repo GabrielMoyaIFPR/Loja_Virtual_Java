@@ -3,6 +3,8 @@ package controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 import models.Carrinho;
 import models.CarrinhoItens;
 import models.Cliente;
@@ -10,6 +12,8 @@ import models.Produto;
 
 public class CarrinhoController {
 	private List<CarrinhoItens> cartItens = new ArrayList<CarrinhoItens>();
+	
+	
 	
 	public  void addItem(Carrinho cart,Produto product, Double quantity, double unitPrice ) {
 		
@@ -21,13 +25,8 @@ public class CarrinhoController {
 		cartItens.add(itens);
 		
 	}
-	
-	public  void removeItem(Carrinho cart,Produto product, Double quantity, double unitPrice ) {
 		
-		
-	}
-	
-	public String result(){
+	public String resultCartItens(){
 		int i;
 		String data = "";
 		for(i=0; i < cartItens.size() ; i++) {
@@ -40,7 +39,7 @@ public class CarrinhoController {
 
 	@Override
 	public String toString() {
-		return result();
+		return resultCartItens();
 				
 	}
 	

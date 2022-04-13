@@ -3,7 +3,7 @@ package models;
 public class Produto {
 	private String name;
 	private double price;
-	private int storage;
+	private double storage;
 	
 	public String getName() {
 		return name;
@@ -17,10 +17,10 @@ public class Produto {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public int getStorage() {
+	public double getStorage() {
 		return storage;
 	}
-	public void setStorage(int storage) {
+	public void setStorage(double storage) {
 		this.storage = storage;
 	}
 	

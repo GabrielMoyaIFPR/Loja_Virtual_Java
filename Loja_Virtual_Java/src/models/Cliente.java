@@ -8,7 +8,7 @@ public class Cliente {
 	private Date dt_nasc;
 	private String cpf;
 	private String address;
-	private int mobile_phone;
+	private String mobile_phone;
 	
 	
 	public String getName() {
@@ -35,15 +35,14 @@ public class Cliente {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public int getMobile_phone() {
+	public String getMobile_phone() {
 		return mobile_phone;
 	}
-	public void setMobile_phone(int mobile_phone) {
+	public void setMobile_phone(String mobile_phone) {
 		this.mobile_phone = mobile_phone;
 	}
 	
-	@Override
 	public String toString() {
-		return "Cliente:" + getName();
+		return "Cliente:" + getName() ;
 	}
 }
