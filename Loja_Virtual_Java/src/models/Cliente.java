@@ -4,13 +4,19 @@ import java.util.Date;
 
 public class Cliente {
 	
+	private int id;
 	private String name;
 	private Date dt_nasc;
 	private String cpf;
 	private String address;
 	private String mobile_phone;
 	
-	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
@@ -42,7 +48,14 @@ public class Cliente {
 		this.mobile_phone = mobile_phone;
 	}
 	
+	@Override
 	public String toString() {
-		return "Cliente:" + getName() ;
+		return "ID:" + getId() 
+		+"\n Cliente:" + getName()
+		+ "\n Data Nascimento:" + getDt_nasc()
+		+ "\n CPF:" + getCpf()
+		+ "\n Endereço:" + getAddress()
+		+ "\n Celular:" + getMobile_phone();
 	}
+	
 }

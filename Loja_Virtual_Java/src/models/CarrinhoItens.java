@@ -2,11 +2,18 @@ package models;
 
 public class CarrinhoItens {
 
+	private int id;
 	private Carrinho cart;
 	private Produto product;
 	private double quantity;
 	private double unitPrice;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public Carrinho getCart() {
 		return cart;
 	}
@@ -34,15 +41,11 @@ public class CarrinhoItens {
 	
 	@Override
 	public String toString() {
-		return "Produto" + product.getName() 
+		return "ID:" + getId() 
+		+"Produto" + product.getName() 
 		+ "Carrinho:" + cart.getClient() 
 		+ "Quantidade:" + getQuantity() 
 		+ "Valor Unitario:" + getUnitPrice()
 		+ "Produto:" + getProduct();
 	}
-	
-	
-	
-	
-	
 }

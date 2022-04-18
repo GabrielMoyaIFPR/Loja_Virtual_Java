@@ -1,10 +1,17 @@
 package models;
 
 public class Produto {
+	private int id;
 	private String name;
 	private double price;
 	private double storage;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
@@ -22,6 +29,14 @@ public class Produto {
 	}
 	public void setStorage(double storage) {
 		this.storage = storage;
+	}
+	
+	@Override
+	public String toString() {
+		return "ID:" + getId() 
+		+"\n Nome do Produto:" + getName()
+		+ "\n Preço:" + getPrice()
+		+ "\n Estoque:" + getStorage();
 	}
 	
 }

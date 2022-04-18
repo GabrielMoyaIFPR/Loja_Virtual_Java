@@ -15,7 +15,10 @@ public class ClienteController {
 		,Date dt_nasc,String cpf,String address
 		,String mobile_phone) 
 	{
+		int id=0;
 		Cliente client = new Cliente();
+		client.setId(id);
+		id++;
 		client.setName(name);
 		client.setDt_nasc(dt_nasc);
 		client.setCpf(cpf);
@@ -27,7 +30,8 @@ public class ClienteController {
 		int i;
 		String data = "";
 		for(i=0; i < clients.size() ; i++) {
-			data = "Nome: \n" + clients.get(i).getName()
+			data = "ID: \n" + clients.get(i).getId() 
+			+"Nome: \n" + clients.get(i).getName()
 			+ "\n Data de Nascimento: \n" + clients.get(i).getDt_nasc()
 			+ "\nCPF: \n" + clients.get(i).getCpf()
 			+ " \nCelular: \n" + clients.get(i).getMobile_phone()

@@ -3,11 +3,9 @@ package controllers;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.JOptionPane;
 
 import models.Carrinho;
 import models.CarrinhoItens;
-import models.Cliente;
 import models.Produto;
 
 public class CarrinhoController {
@@ -17,7 +15,10 @@ public class CarrinhoController {
 	
 	public  void addItem(Carrinho cart,Produto product, Double quantity, double unitPrice ) {
 		
+		int id=0;
 		CarrinhoItens itens = new CarrinhoItens();
+		itens.setId(id);
+		id++;
 		itens.setCart(cart);
 		itens.setProduct(product);
 		itens.setQuantity(quantity);
@@ -30,7 +31,8 @@ public class CarrinhoController {
 		int i;
 		String data = "";
 		for(i=0; i < cartItens.size() ; i++) {
-			data = "Produto: \n" + cartItens.get(i).getProduct().getName()
+			data = "ID: \n" + cartItens.get(i).getId() 
+			+"Produto: \n" + cartItens.get(i).getProduct().getName()
 			+ "\nQuantidade: \n" + cartItens.get(i).getQuantity()
 			+ "\nValor Unitario: \n" + cartItens.get(i).getUnitPrice()
 			+ " \nUsuario: \n" + cartItens.get(i).getCart().getClient().getName();

@@ -4,10 +4,16 @@ import java.util.Date;
 
 public class Carrinho {
 	
-	
+	private int id;
 	private Date BuyDate = new Date();
 	public Cliente client;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public Date getBuyDate() {
 		return BuyDate;
 	}
@@ -20,7 +26,8 @@ public class Carrinho {
 	
 	@Override
 	public String toString() {
-		return "Cliente" + client.getName() + "Data da Compra" + getBuyDate();
+		return "ID:" + getId() + "\n Cliente" + client.getName() + "\n Data da Compra" + getBuyDate();
 	}
+	
 	
 }

@@ -12,7 +12,10 @@ public class ProdutoController {
 	
 	public  void addProduto(String name,double price,double storage) 
 	{
+		int id=0;
 		Produto product = new Produto ();
+		product.setId(id);
+		id++;
 		product.setName(name);
 		product.setPrice(price);
 		product.setStorage(storage);
@@ -22,7 +25,8 @@ public class ProdutoController {
 		int i;
 		String data = "";
 		for(i=0; i < products.size() ; i++) {
-			data = "Nome: \n" + products.get(i).getName()
+			data = "ID: \n" + products.get(i).getId() 
+			+ "Nome: \n" + products.get(i).getName()
 			+ "\n Preço: \n" + products.get(i).getPrice()
 			+ "\n Estoque: \n" + products.get(i).getStorage();
 		} 
